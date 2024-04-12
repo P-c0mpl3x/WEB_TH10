@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 220px auto auto auto auto auto auto auto 220px;
+            grid-gap: 27px;
+            background-color: whitesmoke;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid grey;
+        }
+
+        .header {
+            grid-column: 1 / span 9;
+            grid-row: 1;
+            color: whitesmoke;
+            background-color: rgb(78, 175, 78);
+            padding-left: 20px;
+        }
+
+        .left {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .left div {
+            font-size: 15px;
+            background-color: rgb(219, 208, 208);
+            border-radius: 6px;
+            line-height: 33px;
+        }
+
+        .left h2 {
+            margin: 5px 0;
+            border-radius: 6px;
+        }
+
+        .content {
+            grid-column: 2 / span 7;
+            grid-row: 2;
+        }
+
+        .right {
+            grid-column: 9;
+            grid-row: 2;
+        }
+
+        .footer {
+            grid-column: 1 / span 9;
+            grid-row: 3;
+        }
+
+        .menu1 h2 {
+            color: whitesmoke;
+            background-color: rgb(78, 175, 78);
+            margin-top: 0;
+        }
+
+        .content img {
+            width: 130px;
+            height: 150px;
+        }
+
+        .first_content img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .second_content img {
+            float: right;
+            margin-left: 10px;
+        }
+
+        .content h3 {
+            clear: both;
+        }
+
+        .content a {
+            color: black;
+            font-weight: lighter;
+        }
+
+        .right {
+            color: whitesmoke;
+            background-color: rgb(38, 131, 236);
+            padding: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: rgb(219, 208, 208);
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1>Welcome to My Homepage</h1>
+            <p>Use the menu to select different StyleSheets</p>
+        </div>
+        <div class="left">
+            <div class="menu1">
+                <h2>Menu 1</h2>
+            </div>
+            <div>
+                <h2>Menu 2</h2>
+            </div>
+            <div>
+                <h2>Menu 3</h2>
+            </div>
+            <div>
+                <h2>Menu 4</h2>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Same page Different<br />StyleSheets</h1>
+            <div class="first_content">
+                <img src="deer.jpg">
+                <p>Over the past year, I have fallen countless times. I have fallen at high speeds and low. I have
+                    fallen turning a corner on Randall’s Island at 20 miles an hour, and I have fallen at the perilous
+                    speed of nearly zero miles an hour. I have fallen on asphalt, grass, astroturf, and gravel. I have
+                    fallen, in no particular order, and in many various quantities, on my elbows, my knees, my thighs,
+                    my head, my shoulders, my wrists, and my hands. I have fallen trying to speed up, and I have fallen
+                    trying to slow down. I have fallen going uphill and down. I have fallen while going so slow that I
+                    could have just stepped off the bike. I have fallen in front of people. I have fallen in front of so
+                    many people. I have fallen in front of a single person so engrossed by their phone that they did not
+                    see me falling. I have fallen in front of a family of tourists in Central Park, and then I have
+                    gotten up and fallen again. I have fallen, while white-knuckling the brakes, gently and sideways
+                    into a fence while a herd of children clutching a communal leash waddled past me. I have fallen in
+                    front of a mother and her baby. I have also fallen in front of no one, in the sheer absence of a
+                    soul, alone in a parking lot in the early morning, after having bumped into a traffic cone. I have,
+                    in the process of falling, said the same chorus of things, all at the same resigned volume, never
+                    too loud. I have fallen and said oop. I have fallen and said ah, shit. I have fallen and apologized.
+                </p>
+            </div>
+            <h3>
+                <a href="#">StyleSheet1</a>, <a href="#">StyleSheet2</a>, <a href="#">StyleSheet3</a>, <a
+                    href="#">StyleSheet4</a>
+            </h3>
+            <h1>No Styles</h1>
+            <div class="second_content">
+                <img src="deer.jpg">
+                <p>Over the past year, I have fallen countless times. I have fallen at high speeds and low. I have
+                    fallen turning a corner on Randall’s Island at 20 miles an hour, and I have fallen at the perilous
+                    speed of nearly zero miles an hour. I have fallen on asphalt, grass, astroturf, and gravel. I have
+                    fallen, in no particular order, and in many various quantities, on my elbows, my knees, my thighs,
+                    my head, my shoulders, my wrists, and my hands. I have fallen trying to speed up, and I have fallen
+                    trying to slow down. I have fallen going uphill and down. I have fallen while going so slow that I
+                    could have just stepped off the bike. I have fallen in front of people. I have fallen in front of so
+                    many people. I have fallen in front of a single person so engrossed by their phone that they did not
+                    see me falling. I have fallen in front of a family of tourists in Central Park, and then I have
+                    gotten up and fallen again. I have fallen, while white-knuckling the brakes, gently and sideways
+                    into a fence while a herd of children clutching a communal leash waddled past me. I have fallen in
+                    front of a mother and her baby. I have also fallen in front of no one, in the sheer absence of a
+                    soul, alone in a parking lot in the early morning, after having bumped into a traffic cone. I have,
+                    in the process of falling, said the same chorus of things, all at the same resigned volume, never
+                    too loud. I have fallen and said oop. I have fallen and said ah, shit. I have fallen and apologized.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Side - Bar</h2>
+            <p>
+                Fair warning: this is a tale with no happy ending. It’s the story of a young man finding online the
+                confidence and social network he had been unable to discover in real life, and becoming seduced by the
+                power and possibilities of illegal hacking, with a tragic conclusion. Edwin Robb’s not blameless, of
+                course, but you still can’t help but feel a little bit sorry for him.
+            </p>
+        </div>
+        <div class="footer">There were times when I longed for a partner. I knew it was better to be alone than in a bad
+            relationship, but I still craved some kind of romantic connection. I dated: immersing myself in dating apps,
+            swiping and liking, and going on first dates, before scampering back to my solitude. Sometimes my dates
+            liked me and wanted more. Sometimes I liked them and wanted more. But those desires rarely overlapped. In 12
+            years, I had only a few flings, all of which were more trouble than they were worth. I was sometimes lonely,
+            though less than people assumed. I missed having a steady person by my side, someone to drive me home from
+            the hospital after a medical procedure or collect medication from the pharmacy when I was sick. But I
+            certainly didn’t feel lonely on weekend nights, curled up with a novel and a bubbling lasagna. </div>
+    </div>
+</body>
+
+</html>

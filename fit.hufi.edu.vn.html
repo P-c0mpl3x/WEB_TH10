@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <title>Khoa công nghệ Thông Tin</title>
+    <style>
+        .container {
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 300px 500px 500px;
+            grid-auto-rows: minmax(50px, auto);
+        }
+
+        .header {
+            grid-row: 1/2;
+            grid-column: 1/4;
+        }
+
+        .linecontent1 {
+            grid-row: 2/3;
+            grid-column: 1/4;
+        }
+
+        .linecontent2 {
+            grid-row: 4/5;
+            grid-column: 1/4;
+        }
+
+        .linecontent3 {
+            grid-row: 8/9;
+            grid-column: 1/4;
+        }
+
+        .linecontent4 {
+            grid-row: 8/9;
+            grid-column: 1/4;
+        }
+
+        .linecontent5 {
+            grid-row: 10/11;
+            grid-column: 1/4;
+        }
+
+        .left1 {
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+
+        .left2 {
+            grid-row: 5/6;
+            grid-column: 1/2;
+        }
+
+        .left3 {
+            grid-row: 7/8;
+            grid-column: 1/2;
+        }
+
+        .mid1 {
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+
+        .mid2 {
+            grid-row: 5/6;
+            grid-column: 2/3;
+        }
+
+        .mid3 {
+            grid-row: 7/8;
+            grid-column: 2/3;
+        }
+
+        .right1 {
+            grid-row: 3/4;
+            grid-column: 3/4;
+        }
+
+        .right2 {
+            grid-row: 5/6;
+            grid-column: 3/4;
+        }
+
+        .right3 {
+            grid-row: 7/8;
+            grid-column: 3/4;
+        }
+
+        .logoslide1 {
+            grid-row: 9/10;
+            grid-column: 1/4;
+            overflow: hidden;
+            padding: 50px 0;
+        }
+
+        .logoslide2 {
+            grid-row: 11/12;
+            grid-column: 1/4;
+            overflow: hidden;
+            padding: 50px 0;
+        }
+
+        .top-logo img {
+            height: 100px;
+        }
+
+        .banner img {
+            height: 400px;
+            width: 1300px;
+        }
+
+        .navbar {
+            grid-row: 2/3;
+            grid-column: 1/4;
+            background-color: rgb(57, 162, 231);
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+        }
+
+        .navbar-box {
+            display: flex;
+        }
+
+        .navbar li {
+            font-size: 15px;
+            line-height: 40px;
+            color: whitesmoke;
+            background-color: rgb(57, 162, 231);
+            margin: auto;
+            position: relative;
+        }
+        .subnav1,
+        .subnav2,
+        .subsubnav1,
+        .subsubnav2 {
+            position: absolute;
+            display: none;
+        }
+
+        .subnav1 li,
+        .subnav2 li,
+        .subsubnav1 li,
+        .subsubnav2 li {
+            width: 200px;
+            background-color: #90F;
+            margin: 1px 1px 1px 0;
+        }
+
+        .subnav1 ul,
+        .subnav2 ul {
+            list-style: none;
+        }
+
+        .subnav1 {
+            left: 0%;
+            top: 100%;
+            padding-left: 0;
+        }
+
+        .subnav2 {
+            left: 0%;
+            top: 100%;
+            padding-left: 0;
+        }
+
+        .subsubnav2 {
+            left: 100%;
+            top: 0%;
+            padding-left: 0;
+        }
+
+        .subsubnav1 {
+            left: 100%;
+            top: 0%;
+            padding-left: 0;
+
+        }
+
+        .navbar-box a {
+            color: whitesmoke;
+            text-transform: uppercase;
+        }
+
+        .navbar li:hover {
+            color: rgb(241, 227, 29);
+        }
+
+        .navbar-box li:hover>.subnav1 {
+            display: block
+        }
+
+        .navbar-box li:hover>.subnav2 {
+            display: block
+        }
+
+        .subnav2 li:hover>.subsubnav1 {
+            display: block;
+        }
+
+        .subnav2 li:hover>.subsubnav2 {
+            display: block;
+        }
+
+        .subsubnav1 li,
+        .subsubnav2 li {
+            margin-top: 0;
+        }
+
+        .mainbody hr {
+            height: 3px;
+            background-color: rgb(57, 162, 231);
+            border: none;
+            margin-top: 0;
+        }
+
+        .mainbody h3 {
+            width: 270px;
+            background-color: rgb(57, 162, 231);
+            margin-bottom: 0;
+            color: whitesmoke;
+            padding: 4px;
+        }
+
+        .right1 ul,
+        .right2 ul,
+        .right3 ul {
+            list-style: square;
+            padding-left: 25px;
+        }
+
+        .right1 a,
+        .right2 a,
+        .right3 a {
+            float: right;
+            text-decoration: none;
+            color: red;
+            font-weight: bolder;
+        }
+
+        .right1 li,
+        .right2 li,
+        .right3 li {
+            line-height: 30px;
+        }
+
+        .mid1 a,
+        .mid2 a,
+        .mid3 a {
+            color: rgb(57, 162, 231);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .logo {
+            white-space: nowrap;
+            animation: 5s slide infinite linear;
+        }
+
+        .foot {
+            grid-row: 12/13;
+            grid-column: 1/4;
+            background-color: rgb(57, 162, 231);
+            text-align: center;
+            color: whitesmoke;
+            font-size: larger;
+        }
+
+        .foot-box {
+            text-align: center;
+            padding: 0;
+        }
+
+        .foot-box p {
+            display: inline-block;
+        }
+
+        .num-item {
+            background-color: black;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .box_input
+        {
+            border-radius: 50px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            height: 30px;
+        }
+        .box_input input
+        {
+            background-color: whitesmoke;
+            outline: none;
+            border: none;
+            width: 250px;       
+            border-radius: 50px;     
+        }
+        .gg-search
+        {
+            margin-right: 9px;
+            margin-top: 4px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="mainbody">
+    <div class="container">
+        <div class="header">
+            <div class="top-logo">
+                <img src="logo.jpg">
+            </div>
+            <div class="navbar">
+                <ul class="navbar-box">
+                    <li>TRANG CHỦ</li>
+                    <li>GIỚI THIỆU
+                        <ul class="subnav1">
+                            <li><a href="#">lịch sử phát triển</a></li>
+                            <li><a href="#">tầm nhìn - sứ mạng</a></li>
+                            <li><a href="#">bộ máy tổ chức</a></li>
+                            <li><a href="#">ba công khai</a></li>
+                        </ul>
+                    </li>
+                    <li>TIN TỨC - THÔNG BÁO</li>
+                    <li>ĐÀO TẠO
+                        <ul class="subnav2">
+                            <li><a href="#">các trình độ đào tạo</a></li>
+                            <li><a href="#">chương trình đào tạo ></a>
+                                <ul class="subsubnav1">
+                                    <li><a href="#">sau đại học</a></li>
+                                    <li><a href="#">đại học</a></li>
+                                    <li><a href="#">đại học LT từ CĐ</a></li>
+                                    <li><a href="#"> cao đẳng</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">đào tạo quốc tế ></a>
+                                <ul class="subsubnav2">
+                                    <li><a href="#">chương trình 2 + 2</a></li>
+                                    <li><a href="#">chương trình 4 + 0</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">đề án mở ngành mới</a></li>
+                        </ul>
+                    </li>
+                    <li>KHOA HỌC & CÔNG NGHỆ</li>
+                    <li>ĐOÀN HỘI</li>
+                    <li>
+                        <div class="box_input">
+                                    <input type="text" placeholder="Nhập từ khóa tìm kiếm" name="search">
+                                    <a href="#"><i class="gg-search"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="banner">
+                <img src="ngvn.jpg">
+            </div>
+        </div>
+        <div class="linecontent1">
+            <h3>KHOA HỌC & CÔNG NGHỆ</h3>
+            <hr>
+        </div>
+        <div class="left1">
+            <img src="img.png">
+        </div>
+        <div class="mid1">
+            <h4><a href="#">Thông báo về việc công bố danh sách đề tài khóa luận tốt nghiệp khóa 2000</a></h4>
+            <p>On spending six months on the southern coast of Argentina with the “Jane Goodall of penguins” and several
+                hundred of her research subjects.</p>
+        </div>
+        <div class="right1">
+            <ul>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <a href="#">▶Xem thêm</a>
+            </ul>
+        </div>
+        <div class="linecontent2">
+            <h3>ĐOÀN HỘI</h3>
+            <hr>
+        </div>
+        <div class="left2">
+            <img src="img.png">
+        </div>
+        <div class="mid2">
+            <h4><a href="#">Thông báo về việc công bố danh sách đề tài khóa luận tốt nghiệp khóa 2000</a></h4>
+            <p>On spending six months on the southern coast of Argentina with the “Jane Goodall of penguins” and several
+                hundred of her research subjects.</p>
+        </div>
+        <div class="right2">
+            <ul>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <a href="#">▶Xem thêm</a>
+            </ul>
+        </div>
+        <div class="linecontent3">
+            <h3>HỌC TẬP</h3>
+            <hr>
+        </div>
+        <div class="left3">
+            <img src="img.png">
+        </div>
+        <div class="mid3">
+            <h4><a href="#">Thông báo về việc công bố danh sách đề tài khóa luận tốt nghiệp khóa 2000</a></h4>
+            <p>On spending six months on the southern coast of Argentina with the “Jane Goodall of penguins” and several
+                hundred of her research subjects.</p>
+        </div>
+        <div class="right3">
+            <ul>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <li>A gang of teen hackers snatched the keys to Microsoft’s videogame empire. Then they went too far.
+                </li>
+                <a href="#">▶Xem thêm</a>
+            </ul>
+        </div>
+        <div class="linecontent4">
+            <h3>ĐỐI TÁC</h3>
+            <hr>
+        </div>
+        <div class="logoslide1">
+            <div class="logo">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+            </div>
+        </div>
+        <div class="linecontent5">
+            <h3>TIN TỨC - THÔNG BÁO</h3>
+            <hr>
+        </div>
+        <div class="logoslide2">
+            <div class="logo">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+                <img src="img.png">
+                <img src="per.jpg">
+            </div>
+        </div>
+        <footer class="foot">
+            <p>Liên hệ khoa Công nghệ Thông tin - Trường Đại học Công nghiệp Thực Phẩm Tp.HCM</p>
+            <p>Địa chỉ: 140 Lê Trọng Tấn, Tây Thạnh, Tân Phú, Tp.HCM. ĐT: 00000000000000 Mail: huit@gmail.com</p>
+            <div class="foot-box">
+                <p>Số người online: </p>
+                <p class="num-item">1</p>
+                <p class="num-item">1</p>
+                <p class="num-item">2</p>
+                <p class="num-item">9</p>
+                <p class="num-item">2</p>
+            </div>
+            <div class="foot-box">
+                <p>Số lượt truy cập: </p>
+                <p class="num-item">0</p>
+                <p class="num-item">4</p>
+                <p class="num-item">2</p>
+                <p class="num-item">8</p>
+                <p class="num-item">6</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
